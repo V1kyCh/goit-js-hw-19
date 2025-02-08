@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <main>
+        <button class="add-movie" type="button">add movie</button>
+        <ul class="movies-list"></ul>
+    </main>
+    <div class="backdrop-add is-hidden">
+        <div class="modal-add">
+            <form class="form-data">
+                <h2 class="model-add__text">Додавання фільму</h2>
+                <h4 class="modal-add__title">Введіть інформацію про фільм:</h4>
+                <ul class="add-modal_list">
+                    <li class="add-modal__item"><label for="name">Назва фільму:</label><input name="name"  class="form-input"
+                            id="name" type="text"></li>
+                    <li class="add-modal__item"><label for="genre">Жанр фільму:</label><input name="genre" class="form-input"
+                            id="genre" type="text"></li>
+                    <li class="add-modal__item"><label for="director">Директор фільму:</label><input name="director" class="form-input"
+                            id="director" type="text"></li>
+                    <li class="add-modal__item"><label for="year">Рік фільму:</label><input name="year" class="form-input" id="year"
+                            type="text"></li>
+                </ul>
+                <button type="submit" class="form-btn-send-data">send</button>
+            </form>
+            <button type="button" class="close-modal">close</button>
+        </div>
+    </div>
+    <div class="backdrop-edit is-hidden">
+        <div class="modal-edit">
+            <form class="edit-form-data">
+                <h2 class="model-edit__text">Повна зміна фільму</h2>
+                <h4 class="modal-edit__title">Введіть інформацію про фільм:</h4>
+                <ul class="edit-modal_list">
+                    <li class="edit-modal__item"><label for="name">Назва фільму:</label><input name="name"  class="edit-form-input"
+                            id="name" type="text"></li>
+                    <li class="edit-modal__item"><label for="genre">Жанр фільму:</label><input name="genre" class="edit-form-input"
+                            id="genre" type="text"></li>
+                    <li class="edit-modal__item"><label for="director">Директор фільму:</label><input name="director" class="edit-form-input"
+                            id="director" type="text"></li>
+                    <li class="edit-modal__item"><label for="year">Рік фільму:</label><input name="year" class="edit-form-input" id="year"
+                            type="text"></li>
+                </ul>
+                <button type="submit" class="form-btn-send-data">send</button>
+            </form>
+            <button type="button" class="close-edit-modal">close</button>
+        </div>
+    </div>
+    <div class="backdrop-edit-part is-hidden">
+        <div class="modal-edit-part">
+            <form class="edit-part-form-data">
+                <h2 class="model-edit-part__text">Часткова зміна фільму</h2>
+                <h4 class="modal-edit-part__title">Введіть інформацію про фільм:</h4>
+                <ul class="edit-part-modal_list">
+                    <li class="edit-part-modal__item"><label for="name">Назва фільму:</label><input name="name"  class="edit-part-form-input"
+                            id="name" type="text"></li>
+                    <li class="edit-part-modal__item"><label for="genre">Жанр фільму:</label><input name="genre" class="edit-part-form-input"
+                            id="genre" type="text"></li>
+                    <li class="edit-part-modal__item"><label for="director">Директор фільму:</label><input name="director" class="edit-part-form-input"
+                            id="director" type="text"></li>
+                    <li class="edit-part-modal__item"><label for="year">Рік фільму:</label><input name="year" class="edit-part-form-input" id="year"
+                            type="text"></li>
+                </ul>
+                <button type="submit" class="form-btn-send-data">send</button>
+            </form>
+            <button type="button" class="close-edit-part-modal">close</button>
+        </div>
+    </div>
+    <!-- {
+        "movies": [
+          {
+            "id": 1,
+            "title": "The Shawshank Redemption",
+            "genre": "Drama",
+            "director": "Frank Darabont",
+            "year": 1994
+          },
+          {
+            "id": 2,
+            "title": "The Godfather",
+            "genre": "Crime",
+            "director": "Francis Ford Coppola",
+            "year": 1972
+          },
+          {
+            "id": 3,
+            "title": "Pulp Fiction",
+            "genre": "Crime",
+            "director": "Quentin Tarantino",
+            "year": 1994
+          },
+          {
+            "id": 4,
+            "title": "The Dark Knight",
+            "genre": "Action",
+            "director": "Christopher Nolan",
+            "year": 2008
+          },
+          {
+            "id": 5,
+            "title": "Inception",
+            "genre": "Action",
+            "director": "Christopher Nolan",
+            "year": 2010
+          }
+        ]
+      } -->
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>
