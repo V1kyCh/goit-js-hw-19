@@ -1,4 +1,11 @@
-import { editMovie } from "../services/editMovieApi"
+import { editMovieApi } from "../services/editMovieApi"
+
+import { getMoviesAPI } from "../services/getMoviesApi";
+import { createMarkup } from "../moviesLayout"
+import { openEditModal } from "../modal/editMovieModal";
+import { openEditPartModal } from "../modal/editPartMovieModal";
+import { deleteMovie } from "../deletingMovie";
+
 export const openEditModal = () => {
     const modalEditEl = document.querySelector('.backdrop-edit')
     const editBtnArr = document.querySelectorAll('.edit-btn')
@@ -12,7 +19,7 @@ export const openEditModal = () => {
         })
     })
 
-    formEl.addEventListener('submit', (e) => {
+    formEl.addEventListener('submit', async (e) => {
         e.preventDefault()
         modalEditEl.classList.add('is-hidden')
         const productDataToEdit = {
@@ -21,7 +28,8 @@ export const openEditModal = () => {
             director: `${formEl.elements.director.value}`,
             year: `${formEl.elements.year.value}`
         }
-        editMovie(productDataToEdit, parentId)
+        await editMovieApi(productDataToEdit, parentId).then((post) => post)
+        await getMoviesAPI().then(data => { createMarkup(data); openEditModal(); openEditPartModal(); deleteMovie() })
     })
 
     const editModalClose = document.querySelector('.close-edit-modal')

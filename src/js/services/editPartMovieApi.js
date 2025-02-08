@@ -1,14 +1,15 @@
-export const editPartMovie = (data, editedProductId) => {
-    console.log(data)
-    const options = {
+export const editPartMovie = async (data, editedProductId) => {
+    try {
+    return await fetch(`http://localhost:3000/movies/${editedProductId}`, {
         method: "PATCH",
         body: JSON.stringify(data),
         headers: {
             "Content-Type": "application/json; charset=UTF-8",
         }
-    };
-    fetch(`http://localhost:3000/movies/${editedProductId}`, options)
+    })
         .then(response => response.json())
-        .then(post => console.log(post))
-        .catch(error => console.log("ERROR" + error));
+    } catch(error) {
+        console.log(error)
+    }
+
 };

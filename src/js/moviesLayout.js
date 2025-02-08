@@ -13,5 +13,5 @@ export const createMarkup = (moviesData) => {
              </div>
         </li>`
     ).join('')
-    moviesList.insertAdjacentHTML("beforeend", makrup)
+    moviesList.innerHTML = makrup
 }
